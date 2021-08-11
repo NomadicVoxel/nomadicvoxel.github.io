@@ -1,0 +1,100 @@
+/* Skltl: A skeletal framework by NomadicVoxel. Still in development.
+This being the core, this sheet will adjust all the "vanilla" styling, and work on the new stuff later. This is to fix what I feel is broken with the default CSS.*/
+
+@import url("Skltl.classy.css");
+@import url("Skltl.proportions.css");
+@import url("Skltl.skin.css");
+@import url('Skltl.skin.typography.css');
+@import url('Skltl.header.css');
+
+/* This sheet, the core of Skltl, does a *lot*. Short version: 
+    * Applies the skin
+    * Adjusts many of the weird issues pertaining to the default CSS such as not using border-box
+    * Some things, that I always wondered aren't display:block, are now that.
+    * SVG icons match font color if they're in a span (or some other inline text)
+    * SVG and images in an em tag are 3em tall. I use these for images in footer like the custom creative commons badge on my site.
+*/
+* {box-sizing: border-box;}
+body {
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--sans);
+    padding: 0;
+    margin: 0;
+}
+main {min-height: 75vh;}
+
+main, footer section {
+    max-width: var(--maxWidth);
+    margin: auto auto 1em auto;
+}
+h1,h2,h3,h4,h5,h6 {margin: var(--breathingRoom) 0;}
+
+a:link, nav a:visited {
+    color: var(--blue);
+}
+a:visited {
+    color: var(--purple);
+}
+
+footer{
+    font-size:.75em;
+    text-align:center;
+}
+
+/* Taming images */
+img, svg{
+    display: block;
+    margin: auto;
+}
+
+a svg,a img {
+    border-bottom: var(--thinLine) var(--blue);
+    /*glow*/ box-shadow: 0px 0px 16px -3px var(--blue);
+    cursor: pointer;
+}
+
+span svg, span img, label svg, label img, a svg, a img{
+    display:inline;
+    height:1em;
+    fill: currentColor;
+    line-height: 1;
+    position:relative;
+    top: 0.15em;
+}
+
+em svg, em img {
+    height: 3em;
+}
+
+
+/* Other more... stylistic decisions. */
+hr {
+    margin: calc(var(--breathingRoom)*2);
+    border-image: var(--fullGradient);
+    color: #0000;
+    height: .05rem;
+    border-width: .05rem 0 0 0;
+    border-style: solid;
+    border-image-slice: 1;
+}
+del {color: var(--red);}
+
+ins {color: var(--green);}
+
+mark {
+    color: var(--ink);
+    background: var(--yellow);
+}
+::selection {
+    background: var(--accent);
+    color: var(--ink);
+}
+
+blockquote {
+    display: block;
+    margin: var(--breathingRoom);
+    border-left: var(--thinLine);
+    border-right: var(--thinLine);
+}
+

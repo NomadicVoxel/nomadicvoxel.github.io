@@ -1,0 +1,35 @@
+/* * Skltl: A skeletal framework by NomadicVoxel. Still in development. */
+/* This page is all for color adjustments. */
+
+/* Dark color theme */
+:root { 
+	--canvas: #000;
+	--ink: #ffffff;
+	/* * --accent: hsl(247, 100%, 65%); */
+	--AH:247;--AS:100%;--AL:65%;
+	--accent: hsl(var(--AH),var(--AS),var(--AL));
+	--boxback: hsl(var(--AH),calc(var(--AS)*0.25),10%);
+	--red:#D38686;
+	--yellow: #ced386;
+	--green:#70D470;
+	--blue:#59CAFF;
+	--purple: #9e91ff;
+	--fullGradient: linear-gradient(to right,rgba(0,0,0,0) 0%, var(--accent) 20%, var(--accent) 80%, rgba(0,0,0,0) 100%);
+}
+
+/* Light color theme */
+@media screen and (prefers-color-scheme:light) {
+	:root{
+		--canvas: #ffffff;
+		--ink: #000000;
+		/* * --accent: hsl(227, 58%, 65%); */
+		--AH:227; --AS:58%; --AL:65%;
+		--accent: hsl(var(--AH),var(--AS),var(--AL));
+		--boxback: hsl(var(--AH),var(--AS),95%);
+		--red:#a52622;
+		--yellow: #9e8a19;
+		--green:#20b351;
+		--blue:#135ec0;
+		--purple: #4b1d75;
+	}
+}

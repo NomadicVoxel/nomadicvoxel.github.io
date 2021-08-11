@@ -1,0 +1,39 @@
+/* Skltl: A skeletal framework by NomadicVoxel. Still in development.
+Header module.*/
+
+header {
+    background: var(--accent);
+    padding: var(--breathingRoom);
+    font-size: var(--headerScale);
+    width: 100%;
+}
+
+/* Hideaway stuff */
+.HideButton:checked~.Hide, .HideButton {display: none;}
+
+/* Collapsible menus */
+aside {
+    background-color:var(--boxback);
+    padding: var(--breathingRoom);
+}
+
+.Left.Drawer {
+	float: left;
+	margin-right: var(--breathingRoom);
+    border-bottom: var(--thinLine) var(--accent);
+    border-right: var(--thinLine) var(--accent);
+    
+}
+.Right.Drawer {
+	float: right;
+	margin-left: var(--breathingRoom);
+}
+aside nav a:link, aside nav a:visited{
+    color:var(--ink);
+}
+aside nav a{
+    display: block;
+    text-decoration:none;
+    padding:var(--breathingRoom);
+}
+aside nav a:not(:first-child){border-top: var(--thinLine) var(--accent);}

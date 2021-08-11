@@ -1,0 +1,14 @@
+/* * Skltl: A skeletal framework by NomadicVoxel. Still in development. */
+/* This page is for tweaking porportions. From margins to outlines.  */
+:root{
+
+    /* * Line styles */
+	--thinLine: .075rem solid;
+	--thickLine: .1rem solid;
+
+    /* * Padding, spacing, and scaling */
+	--breathingRoom: .25em;
+	--maxWidth: 50rem;
+	--headerScale:1.5rem;
+}
+
