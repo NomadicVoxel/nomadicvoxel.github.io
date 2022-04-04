@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="/favicon.png" type="image/png">
+	<meta name="robots" content="noindex">
+	<title>Skltl framework Sandbox</title>
+</head>
+
+<style>
+	@import url(/Skltl/Skltl.css);
+	summary{
+		list-style: "👉";
+	}
+	details[open] > summary{
+		list-style:"👇"
+	}
+</style>
+
+<body>
+	<header>
+		<i>
+			<label for="DrawerToggle">
+				<svg class="DrawerLabel" viewbox="0 0 24 24" height="1em">
+					<path id="TripleBar" d="M 3,18 H 21 V 16 H 3 Z M 3,13 H 21 V 11 H 3 Z M 3,6 V 8 H 21 V 6 Z" />
+				</svg>
+			</label>
+		</i>
+		Skltl / Sandbox
+	</header>
+
+	<input type="checkbox" id="DrawerToggle" class="HideButton" checked="false" />
+	<nav class="Hide">
+		<a href="../">../</a>
+		<a href="sandbox.html">Sandbox</a>
+		<a href="https://github.com/NomadicVoxel/NomadicVoxel.github.io">Source code</a>
+	</nav>
+
+	<aside>
+		Page contents:
+		<nav>
+			<ul>
+				<li><a href="#1">Text blocks</a></li>
+				<li><a href="#2">Inline text</a></li>
+				<li><a href="#4">Forms</a></li>
+				<li><a href="#3">Media</a></li>
+			</ul>
+		</nav>
+	</aside>
+
+	<main>
+		<h1>Skltl Test Sandbox</h1>
+		<section>
+			<h2 id="1">Text blocks</h2>
+			<h3 id="1a">We needed an h3.</h3>
+			<h4>And an h4.</h4>
+			<h5>And an h5.</h5>
+			<h6>Okay all the heading tags. You too h6.</h6>
+
+			<h3 id="1b">Lists</h3>
+
+			<ul>
+				<li>Unordered</li>
+				<li>list</li>
+				<li>items</li>
+			</ul>
+
+			<ol>
+				<li>Ordered</li>
+				<li>list</li>
+				<li>items</li>
+			</ol>
+
+			<dl>
+				<dt>Dictionary list</dt>
+				<dd>List of terms followed by definitions</dd>
+			</dl>
+
+			<h3 id="1c">Text cards</h3>
+			<p>
+				Dialog: <button onclick="document.querySelector('#dialog').showModal()">click to test</button>
+				<dialog id="dialog">
+					<form method="dialog">
+						Notice: this is a notice.
+						<button type="submit" method="dialog"> Close this notice. </button>
+					</form>
+				</dialog>
+			</p>
+
+			<details>
+				<summary>Details and Summary</summary>
+				Apparently there are hide/reveal widgets built into HTML. huh.
+			</details>
+			<pre>
+Preformatted text retains whitespace. F a  a   a    r      o      u        t.
+				// remember to de-indent it though. ick.
+		<strong>what happens if you put tags inside preformatted text?</strong> <em>Huh it works.</em>
+			</pre>
+
+			<address>Not my address: <br> 1234 Example Ave. <br> AnyTown USA</address>
+
+			<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+				The blockquote HTML element indicates that the enclosed text is an extended quotation.
+				Usually, this is rendered visually by indentation.
+				A URL for the source of the quotation may be given using the cite attribute,
+				while a text representation of the source can be given using the cite element.
+				<cite>MDN</cite>
+			</blockquote>
+
+		</section>
+
+		<section>
+			<h2 id="2">Inline text</h2>
+			<p>
+				Does anyone else find it odd that the default h6 is
+				<em>smaller</em>than<strong>normal text?</strong>
+				No? Okay. <br>
+				Anyway, inline tags here.
+			</p>
+			<h3>Article use</h3>
+			<ul>
+				<li><em>Em for EMPHASIS</em></li>
+				<li><strong>Strong</strong></li>
+				<li><s>S for strikethrough</s></li>
+				<li><cite>cite</cite></li>
+				<li><abbr title="abbreviations">abbr</abbr></li>
+				<li><q>Q for quick quote</q></li>
+				<li><small>small fine print</small></li>
+				<li><sub>sub</sub>script</li>
+				<li><sup>sup</sup>erscript</li>
+			</ul>
+			<h3>Editing</h3>
+			<ul>
+				<li><mark>mark</mark></li>
+				<li><del>Del for deletion</del></li>
+				<li><ins>ins for insertion</ins></li>
+			</ul>
+			<h3>Digital</h3>
+			<ul>
+				<li><a href="#IntentionallyNonexistent">Unvisited anchor</a></li>
+				<li><a href="#">Visited anchor</a></li>
+				<li><code>code</code></li>
+				<li><kbd>ctrl</kbd><kbd>k</kbd><kbd>b</kbd><kbd>d</kbd></li>
+				<li><samp>samp for sample output</samp></li>
+				<li><span>Generic span, shouldn't have any styles without classes...</span></li>
+				<li><var>var</var> variables</li>
+			</ul>
+			<p><dfn>DFN</dfn> should mark the term that is to be defined.</p>
+		</section>
+
+		<section>
+			<h2 id="3">Media</h2>
+			<figure>
+				<img src="../favicon.png" alt="favicon.png">
+				<figcaption>Your current favicon in a figure</figcaption>
+			</figure>
+			<p>
+				<img src="../favicon.png" alt="favicon.png">
+				Image without a figure.
+			</p>
+			<p>And let's do an <i><img src="../favicon.png" alt="favicon.png"></i> image as an icon.</p>
+			I'll work on more stuff like this later.
+		</section>
+
+		<section>
+			<h2 id="4">Forms and inputs</h2>
+			<fieldset>
+				<legend id="4b">Text</legend>
+				<p><input type="text" id="text" placeholder="text"><label for="text">text</label></p>
+				<p><input type="email" id="email"><label for="email">email</label></p>
+				<p><input type="url" id="url"><label for="url">url</label></p>
+				<p><input type="search" id="search"><label for="search">search</label></p>
+				<p><input type="password" id="password"><label for="password">password</label></p>
+				<textarea id="textarea">textarea</textarea> <label for="textarea">textarea</label>
+			</fieldset>
+
+			<fieldset>
+				<legend id="4a">Numbers</legend>
+				<p><input type="number" id="number"><label for="number">number</label></p>
+				<p><input type="time" id="time"><label for="time">time</label></p>
+				<p><input type="date" id="date"><label for="date">date</label></p>
+				<p><input type="tel" id="tel"><label for="tel">tel</label></p>
+				<p><input type="month" id="month"><label for="month">month</label></p>
+				<p><input type="week" id="week"><label for="week">week</label></p>
+				<p><input type="datetime" id="datetime">
+					<label for="datetime">datetime (Don't use this one! Obsoleted, use datetime-local)</label>
+				</p>
+				<p><input type="datetime-local" id="datetime-local">
+					<label for="datetime-local">datetime-local</label>
+				</p>
+			</fieldset>
+
+			<fieldset>
+				<legend id="4c">Buttons</legend>
+				<p> <select id="select">
+						<option>select</option>
+						<optgroup label="XYZ">
+							<option>x</option>
+							<option>y</option>
+							<option>z</option>
+						</optgroup>
+						<optgroup label="ABC" disabled>
+							<option>a</option>
+							<option>b</option>
+							<option>c</option>
+						</optgroup>
+					</select> <label for="select">select</label>
+				</p>
+				<p> <button>button</button> </p>
+				<p><input type="file" id="file"><label for="file">file</label></p>
+				<p><input type="submit" id="submit"><label for="submit">submit</label></p>
+				<p><input type="button" value="button"><label for="button">button</label></p>
+				<p><input type="reset" id="reset"><label for="reset">reset</label></p>
+				<p><input type="radio" name="rdo" id="radio" checked><label for="radio">radio</label></p>
+				<p><input type="radio" name="rdo" id="radios"><label for="radios">radio</label></p>
+				<p><input type="checkbox" id="check"><label for="check">checkbox</label></p>
+				<p><input type="checkbox" id="box" checked><label for="box">checkbox</label></p>
+			</fieldset>
+
+			<fieldset>
+				<legend id="4d">Nonstandard</legend>
+				<p><input type="color" id="color"><label for="color">Color</label></p>
+				<p><input type="range" id="range"><label for="range">range</label></p>
+			</fieldset>
+
+			<fieldset>
+				<legend id="4e">Non-input...type... stuff...</legend>
+				<p> <meter min=0 max=100 low="33" high="67" optimum="80" value="50" id="meter"> 50/100 </meter> <label
+						for="meter">meter</label> </p>
+				<p> <progress id="progress" max="100" value="70"> 70% </progress> <label for="progress">progress</label>
+				</p>
+			</fieldset>
+
+			<p>
+			<h3>Notes:</h3>
+			You can put many auto-validation checks on individual form elements with attributes, no scripting required.
+			<ul>
+				<li>Accept specifies accepted file upload types</li>
+				<li>List sets inputs to only accept &lt;options&gt; from a &lt;datalist&gt;</li>
+				<li>Min/Max for numbers</li>
+				<li>MinLength/MaxLength for any text</li>
+				<li>Multiple checks whether multiple emails or files are allowed.</li>
+				<li>Pattern. Yeah we got regex.</li>
+				<li>Required.</li>
+				<li>Step determines incremental values that are valid for numbers.</li>
+			</ul>
+			ALSO. Don't forget the Output tag. <output>This thing.</output> It has no default styling, its job is for
+			holding JS output.
+			</p>
+
+		</section>
+	</main>
+
+	<footer>
+		<hr>
+		Made from scratch by Clancy Clawson.
+		<a href="https://github.com/NomadicVoxel/Skltl">
+			Source code available here.
+		</a>
+	</footer>
+</body>
+
+</html>

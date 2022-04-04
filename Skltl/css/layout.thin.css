@@ -1,0 +1,35 @@
+@media screen and (max-width:40em) {
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+	header {
+		flex-shrink: 0;
+	}
+	aside,
+	nav {
+		width: 100%;
+		flex-shrink: 0;
+	}
+
+	nav {
+		display: flex;
+		flex-flow: column;
+	}
+	nav a {
+		display: block;
+		width: 100%;
+		padding: 0.5em;
+	}
+	nav a:not(:last-of-type) {
+		border-bottom: 1px solid hsla(var(--pri-h), var(--pri-s), var(--pri-l), 25%);
+	}
+	main,
+	article {
+		margin-bottom: auto;
+		flex-shrink: 0;
+	}
+	footer {
+		flex-shrink: 0;
+	}
+}

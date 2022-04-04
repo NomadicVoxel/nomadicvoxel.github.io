@@ -1,0 +1,66 @@
+/* General */
+:root {
+	background-color: var(--back);
+	color: var(--fore);
+	accent-color: var(--pri);
+}
+
+:not(nav) a:link {
+	color: var(--link);
+}
+:not(nav) a:active,
+:not(nav) a:visited {
+	color: var(--visited);
+}
+
+body {
+	font-family: var(--sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header {
+	font-family: var(--serif);
+}
+
+hr {
+	border: none;
+}
+hr:before {
+	content: "<<>><<>><<>><<>><<>>";
+}
+blockquote {
+	padding: 20px;
+	box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+		0 0 0 2px rgb(128, 128, 128, 0.1), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+aside {
+	padding: 0.25em;
+}
+/* Page layout */
+header {
+	background: hsla(var(--pri-h), var(--pri-s), var(--pri-l), 50%);
+}
+
+body > nav {
+	background: hsla(var(--pri-h), var(--pri-s), var(--pri-l), 25%);
+}
+body > nav a{
+	padding: var(--pad);
+	border-right:1px solid hsla(var(--pri-h), var(--pri-s), var(--pri-l), 25%);
+}
+
+nav a:any-link {
+	color: var(--fore);
+	text-decoration: none;
+}
+
+footer {
+	font-size: 0.75rem;
+	font-family: var(--mono);
+	background-color: hsla(var(--pri-h), var(--pri-s), var(--pri-l), 10%);
+}
