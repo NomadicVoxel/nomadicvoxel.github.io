@@ -1,0 +1,13 @@
+/* Toggle-hide button, now off by default on small screens. */
+@media screen and (max-width:40em) {
+	.HideButton:checked ~ .Hide,
+	.HideButton {
+		display: none;
+	}
+}
+@media screen and (min-width:40em) {
+	.HideButton:not(:checked) ~ .Hide,
+	.HideButton {
+		display: none;
+	}
+}

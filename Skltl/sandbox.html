@@ -11,15 +11,12 @@
 
 <style>
 	@import url(/Skltl/Skltl.css);
-	summary{
-		list-style: "👉";
-	}
-	details[open] > summary{
-		list-style:"👇"
-	}
+	a[href="#Mars"]{color:var(--link) !important;}
+	a[href="#RightHere"]{color:var(--visited) !important;}
 </style>
 
 <body>
+	<a href="#" id="Tab2Skip">Skip to content</a>
 	<header>
 		<i>
 			<label for="DrawerToggle">
@@ -31,7 +28,7 @@
 		Skltl / Sandbox
 	</header>
 
-	<input type="checkbox" id="DrawerToggle" class="HideButton" checked="false" />
+	<input type="checkbox" id="DrawerToggle" class="HideButton" checked="false" title="Toggle for hidden menu" />
 	<nav class="Hide">
 		<a href="../">../</a>
 		<a href="sandbox.html">Sandbox</a>
@@ -79,7 +76,7 @@
 			</dl>
 
 			<h3 id="1c">Text cards</h3>
-			<p>
+			<!-- <p>
 				Dialog: <button onclick="document.querySelector('#dialog').showModal()">click to test</button>
 				<dialog id="dialog">
 					<form method="dialog">
@@ -87,12 +84,12 @@
 						<button type="submit" method="dialog"> Close this notice. </button>
 					</form>
 				</dialog>
-			</p>
+			</p> -->
 
-			<details>
+			<!-- <details>
 				<summary>Details and Summary</summary>
 				Apparently there are hide/reveal widgets built into HTML. huh.
-			</details>
+			</details> -->
 			<pre>
 Preformatted text retains whitespace. F a  a   a    r      o      u        t.
 				// remember to de-indent it though. ick.
@@ -117,7 +114,9 @@ Preformatted text retains whitespace. F a  a   a    r      o      u        t.
 				Does anyone else find it odd that the default h6 is
 				<em>smaller</em>than<strong>normal text?</strong>
 				No? Okay. <br>
-				Anyway, inline tags here.
+				Anyway, inline tags here. <br>
+				<span hover title="Hover test">Testing a custom tooltip tag...</span> 
+				Not sure how to make it stop interfering with other text in the layout, buuuut... it's <em>okay...</em>
 			</p>
 			<h3>Article use</h3>
 			<ul>
@@ -139,8 +138,8 @@ Preformatted text retains whitespace. F a  a   a    r      o      u        t.
 			</ul>
 			<h3>Digital</h3>
 			<ul>
-				<li><a href="#IntentionallyNonexistent">Unvisited anchor</a></li>
-				<li><a href="#">Visited anchor</a></li>
+				<li><a href="#Mars">Unvisited anchor</a></li>
+				<li><a href="#RightHere">Visited anchor</a></li>
 				<li><code>code</code></li>
 				<li><kbd>ctrl</kbd><kbd>k</kbd><kbd>b</kbd><kbd>d</kbd></li>
 				<li><samp>samp for sample output</samp></li>
@@ -179,17 +178,17 @@ Preformatted text retains whitespace. F a  a   a    r      o      u        t.
 			<fieldset>
 				<legend id="4a">Numbers</legend>
 				<p><input type="number" id="number"><label for="number">number</label></p>
-				<p><input type="time" id="time"><label for="time">time</label></p>
-				<p><input type="date" id="date"><label for="date">date</label></p>
+				<!-- <p><input type="time" id="time"><label for="time">time</label></p> -->
+				<!-- <p><input type="date" id="date"><label for="date">date</label></p> -->
 				<p><input type="tel" id="tel"><label for="tel">tel</label></p>
 				<p><input type="month" id="month"><label for="month">month</label></p>
 				<p><input type="week" id="week"><label for="week">week</label></p>
 				<p><input type="datetime" id="datetime">
 					<label for="datetime">datetime (Don't use this one! Obsoleted, use datetime-local)</label>
 				</p>
-				<p><input type="datetime-local" id="datetime-local">
+				<!-- <p><input type="datetime-local" id="datetime-local">
 					<label for="datetime-local">datetime-local</label>
-				</p>
+				</p> -->
 			</fieldset>
 
 			<fieldset>
@@ -221,14 +220,14 @@ Preformatted text retains whitespace. F a  a   a    r      o      u        t.
 
 			<fieldset>
 				<legend id="4d">Nonstandard</legend>
-				<p><input type="color" id="color"><label for="color">Color</label></p>
+				<!-- <p><input type="color" id="color"><label for="color">Color</label></p> -->
 				<p><input type="range" id="range"><label for="range">range</label></p>
 			</fieldset>
 
 			<fieldset>
 				<legend id="4e">Non-input...type... stuff...</legend>
-				<p> <meter min=0 max=100 low="33" high="67" optimum="80" value="50" id="meter"> 50/100 </meter> <label
-						for="meter">meter</label> </p>
+				<!-- <p> <meter min=0 max=100 low="33" high="67" optimum="80" value="50" id="meter"> 50/100 </meter> <label
+						for="meter">meter</label> </p> -->
 				<p> <progress id="progress" max="100" value="70"> 70% </progress> <label for="progress">progress</label>
 				</p>
 			</fieldset>
@@ -246,8 +245,8 @@ Preformatted text retains whitespace. F a  a   a    r      o      u        t.
 				<li>Required.</li>
 				<li>Step determines incremental values that are valid for numbers.</li>
 			</ul>
-			ALSO. Don't forget the Output tag. <output>This thing.</output> It has no default styling, its job is for
-			holding JS output.
+			<!-- ALSO. Don't forget the Output tag. <output>This thing.</output> It has no default styling, its job is for
+			holding JS output. -->
 			</p>
 
 		</section>

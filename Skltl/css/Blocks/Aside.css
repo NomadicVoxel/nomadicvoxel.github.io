@@ -1,0 +1,7 @@
+aside {
+	min-width: 10em;
+	padding: var(--pad) auto;
+}
+aside nav a {
+	display: block;
+}

@@ -1,0 +1,7 @@
+main,
+article {
+	max-width: 40em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: var(--pad);
+}

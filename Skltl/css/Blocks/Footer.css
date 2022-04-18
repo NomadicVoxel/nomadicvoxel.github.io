@@ -1,0 +1,5 @@
+footer {
+	min-height: 3em;
+	padding: var(--pad);
+	text-align: center;
+}

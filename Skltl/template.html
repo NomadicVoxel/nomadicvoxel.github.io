@@ -9,10 +9,12 @@
 </head>
 
 <style>
-	@import url(Skltl.css);
+	@import url(/Skltl/Skltl.css);
+	@import url(config.css);
 </style>
 
 <body>
+	<a href="#" id="Tab2Skip">Skip to content</a>
 	<header>
 		<i>
 			<label for="DrawerToggle"> ≡ </label>
@@ -20,7 +22,7 @@
 		<span id=title> ... </span>
 	</header>
 
-	<input type="checkbox" id="DrawerToggle" class="HideButton" />
+	<input type="checkbox" id="DrawerToggle" class="HideButton" title="Toggle for hidden menu" checked/>
 	<nav class="Hide">
 		<a href="../">../</a>
 	</nav>
