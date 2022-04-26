@@ -1,4 +1,4 @@
-@import url(./default_config.css);
+@import url(default_config.css);
 /* General */
 :root {
 	background-color: var(--back);
