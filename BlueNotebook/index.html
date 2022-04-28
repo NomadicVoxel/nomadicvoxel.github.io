@@ -7,8 +7,29 @@
 		<title>BlueNotebook</title>
 
 		<style>
-			@import url(/Skltl/Skltl.css);
+			@import url(../Skltl/Skltl.css);
 			@import url(config.css);
+
+			.calendar ul {
+				display: grid;
+				grid-template-columns: repeat(7, 1fr);
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.calendar {
+				text-align: center;
+			}
+			.calendar ul:first-of-type:not(:only-of-type) {
+				font-weight: bold;
+				background: hsla(var(--p), 25%);
+			}
+			.calendar li{
+				padding: .5em;
+			}
+			.calendar .last.month, .calendar .next.month{
+				color: hsl(var(--fg),.5);
+			}
 		</style>
 	</head>
 
@@ -23,17 +44,86 @@
 		<input type="checkbox" id="DrawerToggle" class="HideButton" />
 		<nav class="Hide">
 			<label for="FileMenu">File</label>
-			<input type="checkbox" id="FileMenu" class="HideButton" />
 			<div class="hide">
 				<a href="save"><s>save</s></a>
 			</div>
 		</nav>
 
-		<aside> insert calendar here </aside>
+		<aside>
+			<div class="calendar">
+				<h1 class="today">[insert today's date]</h1>
+				<ul>
+					<li>S</li>
+					<li>M</li>
+					<li>T</li>
+					<li>W</li>
+					<li>T</li>
+					<li>F</li>
+					<li>S</li>
+				</ul>
+				<ul>
+					<li class="last month">22</li>
+					<li class="last month">23</li>
+					<li class="last month">24</li>
+					<li class="last month">25</li>
+					<li class="last month">26</li>
+					<li class="last month">27</li>
+					<li class="last month">28</li>
+
+					<li class="last month">29</li>
+					<li class="last month">30</li>
+					<li class="this month">1</li>
+					<li class="this month">2</li>
+					<li class="this month">3</li>
+					<li class="this month">4</li>
+					<li class="this month">5</li>
+
+					<li class="this month">6</li>
+					<li class="this month">7</li>
+					<li class="this month">8</li>
+					<li class="this month">9</li>
+					<li class="this month">10</li>
+					<li class="this month">11</li>
+					<li class="this month">12</li>
+
+					<li class="this month">13</li>
+					<li class="this month">14</li>
+					<li class="this month">15</li>
+					<li class="this month">16</li>
+					<li class="this month">17</li>
+					<li class="this month">18</li>
+					<li class="this month">19</li>
+
+					<li class="this month">20</li>
+					<li class="this month">21</li>
+					<li class="this month">22</li>
+					<li class="this month">23</li>
+					<li class="this month">24</li>
+					<li class="this month">25</li>
+					<li class="this month">26</li>
+
+					<li class="this month">27</li>
+					<li class="this month">28</li>
+					<li class="this month">29</li>
+					<li class="this month">30</li>
+					<li class="this month">31</li>
+					<li class="next month">1</li>
+					<li class="next month">2</li>
+
+					<li class="next month">3</li>
+					<li class="next month">4</li>
+					<li class="next month">5</li>
+					<li class="next month">6</li>
+					<li class="next month">7</li>
+					<li class="next month">8</li>
+					<li class="next month">9</li>
+				</ul>
+			</div>
+		</aside>
 
 		<main>
-			<h1> insert date here </h1>
-			<p> insert journal entry here </p>
+			<h1>insert date here</h1>
+			<p>insert journal entry here</p>
 		</main>
 
 		<footer>
@@ -42,8 +132,6 @@
 			<div>word count</div>
 		</footer>
 
-		<script>
-
-		</script>
+		<script></script>
 	</body>
 </html>

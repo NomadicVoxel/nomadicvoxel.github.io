@@ -8,36 +8,29 @@
 	--mono: "Source Code Pro", "Courier New", Courier, monospace;
 }
 
-
-/* Note: Primary and secondary colors must be broken into sub-components for calculations to work. */
-/* Day theme */
 :root {
-	--back: #e4e0d5;
-	--fore: #36312d;
-	--pri: hsl(88, 61%, 37%);
-	--pri-h: 88;
-	--pri-s: 61%;
-	--pri-l: 37%;
-	--sec: hsl(266, 100%, 35%);
-	--sec-h: 318;
-	--sec-s: 100%;
-	--sec-l: 35%;
+	--bg: 44, 22%, 86%;
+	--fg: 27, 9%, 19%;
+	--p: 88, 61%, 37%;
+	--s: 266, 100%, 35%;
 	--link: var(--pri);
 	--visited: var(--sec);
+	--back: hsl(var(--bg));
+	--fore: hsl(var(--fg));
+	--pri: hsl(var(--p));
+	--sec: hsl(var(--s));
 }
 /* Night theme */
 @media screen and (prefers-color-scheme: dark) {
 	:root {
-		--back: hsl(249, 11%, 12%);
-		--fore: hsl(0, 0%, 93%);
-		--pri: hsl(118, 100%, 64%);
-		--pri-h: 118;
-		--pri-s: 100%;
-		--pri-l: 64%;
-		--sec: hsl(249, 97%, 73%);
-		--sec-h: 290;
-		--sec-s: 97%;
-		--sec-l: 73%;
+		--bg: 249, 11%, 12%;
+		--fg: 0, 0%, 93%;
+		--p: 118, 100%, 64%;
+		--s: 249, 97%, 73%;
+		--back: hsl(var(--bg));
+		--fore: hsl(var(--fg));
+		--pri: hsl(var(--p));
+		--sec: hsl(var(--s));
 		--link: var(--pri);
 		--visited: var(--sec);
 	}

@@ -11,33 +11,30 @@
 /* Note: Primary and secondary colors must be broken into sub-components for calculations to work. */
 /* Day theme */
 :root {
-	--back: #FFF;
-	--fore: #000;
-	--pri: hsl(214, 100%, 44%);
-	--pri-h: 214;
-	--pri-s: 100%;
-	--pri-l: 44%;
-	--sec: hsl(318, 100%, 35%);
-	--sec-h: 318;
-	--sec-s: 100%;
-	--sec-l: 35%;
+	--bg: 0, 0%, 100%;
+	--fg: 0, 0%, 0%;
+	--p: 214, 100%, 44%;
+	--s: 318, 100%, 35%;
+	--back: hsl(var(--bg));
+	--fore: hsl(var(--fg));
+	--pri: hsl(var(--p));
+	--sec: hsl(var(--s));
 	--link: var(--pri);
 	--visited: var(--sec);
 }
 /* Night theme */
 @media screen and (prefers-color-scheme: dark) {
 	:root {
-		--back: #000;
-		--fore: #FFF;
-		--pri: hsl(210, 100%, 64%);
-		--pri-h: 210;
-		--pri-s: 100%;
-		--pri-l: 64%;
-		--sec: hsl(290, 97%, 73%);
-		--sec-h: 290;
-		--sec-s: 97%;
-		--sec-l: 73%;
+		--bg:0, 0%, 0%;
+		--fg:0, 0%, 100%;
+		--p:210, 100%, 64%;
+		--s:290, 97%, 73%;
+		--back: hsl(var(--bg));
+		--fore: hsl(var(--fg));
+		--pri: hsl(var(--p));
+		--sec: hsl(var(--s));
 		--link: var(--pri);
 		--visited: var(--sec);
 	}
 }
+
