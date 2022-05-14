@@ -1,0 +1,305 @@
+/* This CSS was originally composed of several files broken into imports. Here it is compiled into one file instead. *//* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\theme/theme.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\theme\default_config.css*/
+/* Just copy/paste this file and edit the variables. */
+/* Fonts */
+:root {
+	--pad:.25em;
+	--serif: Cambria, Cochin, Georgia, Times, "Times New Roman", "Roboto Serif", serif;
+	--sans: "Segoe UI", Tahoma, Geneva, Verdana, Roboto, sans-serif;
+	--mono: "Courier New", Courier, "Roboto Mono", monospace;
+}
+
+
+/* Note: Primary and secondary colors must be broken into sub-components for calculations to work. */
+/* Day theme */
+:root {
+	--bg: 0, 0%, 100%;
+	--fg: 0, 0%, 0%;
+	--p: 214, 100%, 44%;
+	--s: 318, 100%, 35%;
+	--back: hsl(var(--bg));
+	--fore: hsl(var(--fg));
+	--pri: hsl(var(--p));
+	--sec: hsl(var(--s));
+	--link: var(--pri);
+	--visited: var(--sec);
+}
+/* Night theme */
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		--bg:0, 0%, 0%;
+		--fg:0, 0%, 100%;
+		--p:210, 100%, 64%;
+		--s:290, 97%, 73%;
+		--back: hsl(var(--bg));
+		--fore: hsl(var(--fg));
+		--pri: hsl(var(--p));
+		--sec: hsl(var(--s));
+		--link: var(--pri);
+		--visited: var(--sec);
+	}
+}
+
+
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\theme\default_config.css*/
+/* General */
+:root {
+	background-color: var(--back);
+	color: var(--fore);
+}
+
+:not(nav) a:link {
+	color: var(--link);
+}
+:not(nav) a:active,
+:not(nav) a:visited {
+	color: var(--visited);
+}
+
+body {
+	font-family: var(--sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header {
+	font-family: var(--serif);
+}
+
+hr {
+	border: none;
+}
+
+hr:before {
+	content: "<<>><<>><<>><<>><<>>";
+}
+
+aside {
+	padding: 0.25em;
+}
+/* Page layout */
+header {
+	background: hsla(var(--p), 50%);
+}
+
+body > nav {
+	background: hsla(var(--p), 25%);
+}
+body > nav a{
+	padding: var(--pad);
+	border-right:1px solid hsla(var(--p), 25%);
+}
+
+nav a:any-link {
+	color: var(--fore);
+	text-decoration: none;
+}
+
+footer {
+	font-size: 0.75rem;
+	font-family: var(--mono);
+	background-color: hsla(var(--p), 10%);
+}
+
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\theme/theme.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout/layout.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks/Blocks.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Header.css*/
+header {
+	font-size: 2rem;
+	padding: var(--pad);
+}
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Header.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Aside.css*/
+aside {
+	min-width: 10em;
+	padding: var(--pad);
+	background-color: hsl(var(--fg),3%);
+}
+aside nav a {
+	display: block;
+}
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Aside.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Main.css*/
+main,
+article {
+	max-width: 40em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: var(--pad);
+}
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Main.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Footer.css*/
+footer {
+	min-height: 3em;
+	padding: var(--pad);
+	text-align: center;
+}
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Footer.css*/
+
+
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks/Blocks.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\layout.thin.css*/
+@media screen and (max-width:40em) {
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+	header {
+		flex-shrink: 0;
+	}
+	aside,
+	nav {
+		width: 100%;
+		flex-shrink: 0;
+	}
+
+	nav {
+		display: flex;
+		flex-flow: column;
+	}
+	nav a {
+		display: block;
+		width: 100%;
+		padding: 0.5em 0;
+	}
+	nav a:not(:last-of-type) {
+		border-bottom: 1px solid hsla(var(--pri-h), var(--pri-s), var(--pri-l), 25%);
+	}
+	main,
+	article {
+		margin-bottom: auto;
+		flex-shrink: 0;
+	}
+	footer {
+		flex-shrink: 0;
+	}
+}
+
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\layout.thin.css*/
+
+
+/* Grid definition */
+@media screen and (min-width: 40em) {
+	body {
+		display: grid;
+		grid-template-columns: min-content auto min-content;
+		grid-template-rows: min-content min-content auto min-content;
+	}
+
+	header {
+		grid-column: 1 / -1;
+		grid-row: 1;
+	}
+
+	body > nav {
+		grid-column: 1/-1;
+		grid-row: 2;
+		padding: var(--pad);
+	}
+
+	aside:first-of-type {
+		grid-column: 1;
+		grid-row: 3;
+	}
+
+	main,
+	article {
+		grid-column: 2;
+		grid-row: 3;
+	}
+
+	aside:last-of-type:not(:only-of-type) {
+		grid-column: 3;
+		grid-row: 3;
+	}
+
+	footer {
+		grid-column: 1/-1;
+		grid-row: 4;
+	}
+}
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout/layout.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Functionality/Functionality.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Functionality\Tab2Skip.css*/
+/* 
+Tab2Skip. Paste this to the beginning of the document if you want to use this.
+<a href="#" id="Tab2Skip">Skip to content</a> 
+*/
+#Tab2Skip {
+	position: absolute;
+	top: -2em;
+	left:0;
+	background: var(--back);
+	padding:.25em;
+}
+#Tab2Skip:focus {
+	top: 0;
+}
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Functionality\Tab2Skip.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Functionality\DrawerHideToggle.css*/
+/* Toggle-hide button, now off by default on small screens. */
+@media screen and (max-width:40em) {
+	.HideButton:checked ~ .Hide,
+	.HideButton {
+		display: none;
+	}
+}
+@media screen and (min-width:40em) {
+	.HideButton:not(:checked) ~ .Hide,
+	.HideButton {
+		display: none;
+	}
+}
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Functionality\DrawerHideToggle.css*/
+
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Functionality/Functionality.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\BugStomp.css*/
+html, body{
+	margin:0;
+	min-width: 100%;
+	height: 100vh;
+}
+
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
+i svg{
+	fill:currentColor;
+	width: 1em;
+	height: 1em;
+	position:relative;
+	top:.2em;
+}
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\BugStomp.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Elements/Elements.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Elements\CustomElements.css*/
+code.tag:before{
+	content:"<";
+}
+code.tag:after{
+	content:">";
+}
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Elements\CustomElements.css*/
+blockquote, figure, details {
+	padding-top: 20px 0;
+	width: 95%;
+	margin: 1em auto;
+	box-shadow: 
+		inset 0 -3em 3em hsla(var(--fg), 0.1),
+		0 0 0 2px hsla(var(--fg), 0.1), 
+		0.3em 0.3em .5em hsla(var(--fg), 0.2);
+}
+
+details summary, label{
+	cursor:pointer;
+}
+
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Elements/Elements.css*/
+
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules/Skltl.css*/
