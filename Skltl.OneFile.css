@@ -1,5 +1,3 @@
-/* This CSS was originally composed of several files broken into imports. Here it is compiled into one file instead. *//* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\theme/theme.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\theme\default_config.css*/
 /* Just copy/paste this file and edit the variables. */
 /* Fonts */
 :root {
@@ -41,7 +39,6 @@
 }
 
 
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\theme\default_config.css*/
 /* General */
 :root {
 	background-color: var(--back);
@@ -105,16 +102,10 @@ footer {
 	background-color: hsla(var(--p), 10%);
 }
 
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\theme/theme.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout/layout.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks/Blocks.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Header.css*/
 header {
 	font-size: 2rem;
 	padding: var(--pad);
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Header.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Aside.css*/
 aside {
 	min-width: 10em;
 	padding: var(--pad);
@@ -123,27 +114,18 @@ aside {
 aside nav a {
 	display: block;
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Aside.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Main.css*/
 main,
 article {
 	max-width: 40em;
+	width:100%;
 	margin-left: auto;
 	margin-right: auto;
-	padding: var(--pad);
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Main.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Footer.css*/
 footer {
 	min-height: 3em;
 	padding: var(--pad);
 	text-align: center;
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks\Footer.css*/
-
-
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\Blocks/Blocks.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\layout.thin.css*/
 @media screen and (max-width:40em) {
 	body {
 		display: flex;
@@ -179,8 +161,8 @@ footer {
 		flex-shrink: 0;
 	}
 }
-
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout\layout.thin.css*/
+@import url(Blocks/Blocks.css);
+@import url(layout.thin.css);
 
 
 /* Grid definition */
@@ -223,9 +205,6 @@ footer {
 		grid-row: 4;
 	}
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\layout/layout.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Functionality/Functionality.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Functionality\Tab2Skip.css*/
 /* 
 Tab2Skip. Paste this to the beginning of the document if you want to use this.
 <a href="#" id="Tab2Skip">Skip to content</a> 
@@ -240,8 +219,6 @@ Tab2Skip. Paste this to the beginning of the document if you want to use this.
 #Tab2Skip:focus {
 	top: 0;
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Functionality\Tab2Skip.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Functionality\DrawerHideToggle.css*/
 /* Toggle-hide button, now off by default on small screens. */
 @media screen and (max-width:40em) {
 	.HideButton:checked ~ .Hide,
@@ -255,10 +232,6 @@ Tab2Skip. Paste this to the beginning of the document if you want to use this.
 		display: none;
 	}
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Functionality\DrawerHideToggle.css*/
-
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Functionality/Functionality.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\BugStomp.css*/
 html, body{
 	margin:0;
 	min-width: 100%;
@@ -269,23 +242,19 @@ html, body{
 	box-sizing: border-box;
 }
 
-i svg{
+i svg, span svg, p svg{
 	fill:currentColor;
 	width: 1em;
 	height: 1em;
 	position:relative;
 	top:.2em;
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\BugStomp.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Elements/Elements.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Elements\CustomElements.css*/
 code.tag:before{
 	content:"<";
 }
 code.tag:after{
 	content:">";
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Elements\CustomElements.css*/
 blockquote, figure, details {
 	padding-top: 20px 0;
 	width: 95%;
@@ -299,7 +268,3 @@ blockquote, figure, details {
 details summary, label{
 	cursor:pointer;
 }
-
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules\Elements/Elements.css*/
-
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\CSS Modules/Skltl.css*/
