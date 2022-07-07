@@ -1,0 +1,9 @@
+Dialog{
+    background: var(--back);
+    border: .25em solid var(--fore);
+    color: var(--fore);
+}
+Dialog::backdrop{
+    background: var(--back);
+    backdrop-filter: opacity(75%) blur(.25em);
+}

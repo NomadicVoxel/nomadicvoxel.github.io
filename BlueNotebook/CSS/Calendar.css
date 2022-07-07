@@ -1,0 +1,34 @@
+#calendar {
+	margin: auto;
+	text-align: center;
+	font-family: var(--mono);
+	border-spacing:0;
+}
+#calendar td, #calendar th {
+	padding: 0.5em;
+	border: 1px solid var(--back);
+}
+
+#calendar td {
+	cursor:pointer;
+}
+
+/* Styling the calendar */
+#calendar th {
+	font-weight: bold;
+	background: hsl(var(--s), 50%);
+}
+
+#calendar .LastMonth,
+#calendar .NextMonth {
+	opacity: 50%;
+}
+
+#calendar td.Today{
+	background: hsl(var(--s), 50%);
+}
+
+#calendar td.Active{
+	border: thin solid white;
+	box-sizing:border-box;
+}
